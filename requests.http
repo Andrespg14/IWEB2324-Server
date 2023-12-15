@@ -1,0 +1,60 @@
+################# USERS
+### LISTAR
+GET http://localhost:8000/users HTTP/1.1
+Content-Type: application/json
+
+
+
+### CREAR
+POST http://localhost:8000/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "ALBIOLS",
+    "email": "raul@gmial.com",
+    "contacts": [],
+    "position": {
+        "lat": 35,
+        "lon": -5
+    },
+    "image": ""
+}
+
+### ACTUALIZAR
+PUT http://localhost:8000/users/657b5ac5350c1cff03680faa HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "RAUUUUUUl",
+    "email": "raulitofifa@gmial.com",
+    "contacts" : [
+        "andrespg14"
+        ],
+    "position": {
+        "lat": 35,
+        "lon": -5
+    },
+    "image": "ngjs2p1rigyree9mp1ui"
+}
+
+### BORRAR
+DELETE  http://localhost:8000/users/657b5b11350c1cff03680fb0 HTTP/1.1
+Content-Type: application/json
+
+################# CONTACTOS DE UN USER
+
+### ACTUALIZAR
+POST http://localhost:8000/users/6579ddf72d8262c57784f063/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+    "contact": "hola"
+}
+
+### DELETE
+DELETE http://localhost:8000/users/6579ddf72d8262c57784f063/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+    "contact": "Hola"
+}
